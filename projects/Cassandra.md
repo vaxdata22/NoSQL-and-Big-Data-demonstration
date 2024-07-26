@@ -294,7 +294,7 @@ SELECT Country FROM rell_countries WHERE Language = "English" ALLOW FILTERING;
 
 Q6: Returned the number of countries that speak French:
 ```
-SELECT COUNT(*) FROM rell_countries WHERE Language = ‘French’ ALLOW FILTERING;
+SELECT COUNT(*) FROM rell_countries WHERE Language = 'French' ALLOW FILTERING;
 ```
 ![cassandra8](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic8.png)
 
