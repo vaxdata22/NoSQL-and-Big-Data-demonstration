@@ -8,6 +8,8 @@
 
 ## Solution:
 
+Note: If the screenshots in this section are not showing, you can get the PDF [here.](https://drive.google.com/file/d/1DHrz8wYhOHfqDPLocMGACt_2pI63V4hF/view?usp=sharing)
+
 Started the MongoDB shell from the terminal:
 ```
 mongo
