@@ -2,13 +2,13 @@
 
 ## Task: 
 
-* Treate one database in Redis with your data based on a chosen own case study (at least 10 key/value pairs with values varying in data type). 
+* To create one database in Redis with your data based on a chosen case study (at least 10 key/value pairs with values varying in data type). 
 
 * To implement at least 10 different queries on that data. The data and queries are to demonstrate appropriate variety and complexity. 
 
 ## Solution:
 
-Got the Redis server running, and started the command line interface:
+Got the Redis server running from the terminal, and started the command line interface:
 ```
 redis-server
 redis-cli
