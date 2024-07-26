@@ -8,6 +8,8 @@
 
 ## Solution:
 
+Note: If the screenshots in this section are not showing, you can get the PDF [here.](https://drive.google.com/file/d/1WV6DT1Sbr8DQ9x6V1-663nZR3Ns-F7QZ/view?usp=sharing)
+
 Quickly checked for and made sure there were no existing data (nodes) in the new graph database before starting to create nodes using the Neo4J browser; this command would essentially return no nodes:
 ```
 MATCH (n) RETURN n
