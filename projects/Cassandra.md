@@ -8,6 +8,8 @@
   
 ## Solution:
 
+Note: If the screenshots in this section are not showing, you can get the PDF [here.](https://drive.google.com/file/d/1WfprZasJFenmJRFRsnedtcHmw86kCFiS/view?usp=sharing)
+
 Started the Cassandra CQL shell from the terminal:
 ```
 cqlsh
