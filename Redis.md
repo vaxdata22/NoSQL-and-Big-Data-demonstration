@@ -14,7 +14,7 @@ redis-server
 redis-cli
 PING
 ```
-![redis1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/redis/redis-pic1.png?raw=truw)
+![redis1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/redis/redis-pic1.png)
 
 
 Created a new database (i.e. selected a new namespace):
@@ -91,7 +91,7 @@ Q5: Returned all the field-value pairs in a hash whose key is “rell_info:1”:
 ```
 HGETALL rell_info:1
 ```
-![redis5](screenshots/redis/redis-pic5.png)
+![redis5](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/redis/redis-pic5.png)
 
 Q6: Checked the data type of the key value “rell_hobbies”:
 ```
