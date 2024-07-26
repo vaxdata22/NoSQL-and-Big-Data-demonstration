@@ -8,6 +8,8 @@
 
 ## Solution:
 
+Note: If the screenshots in this section are not showing, you can get the PDF [here.](https://drive.google.com/file/d/1xh3u2CHpoGha5u3H-2gFwLjg6eGyF2vM/view?usp=sharing)
+
 Got the Redis server running from the terminal, and started the command line interface:
 ```
 redis-server
