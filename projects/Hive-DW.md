@@ -8,6 +8,8 @@
 
 ## Solution:
 
+Note: If the screenshots in this section are not showing, you can get the PDF [here.](https://drive.google.com/file/d/1AAxjsQcdoAWdtTU8KKCLaT1hYYsFnYMQ/view?usp=sharing)
+
 Got the Hadoop environment started from the terminal for the Hive data warehouse implementation. 
 Created a new directory called “assignment” to be the current working directory:
 ```
