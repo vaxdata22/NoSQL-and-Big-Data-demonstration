@@ -15,7 +15,9 @@ redis-cli
 PING
 ```
 <br>
+
 ![redis1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/redis/redis-pic1.png)
+
 <br>
 
 Created a new database (i.e. selected a new namespace):
