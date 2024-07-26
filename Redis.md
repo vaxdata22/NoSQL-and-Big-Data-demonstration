@@ -90,7 +90,7 @@ Q5: Returned all the field-value pairs in a hash whose key is “rell_info:1”:
 ```
 HGETALL rell_info:1
 ```
-![redis5](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/redis/redis-pic5.png)
+![redis5](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/1074efa987ca84e271bf67a691a4db3c260aca52/screenshots/redis/redis-pic5.png)
 
 Q6: Checked the data type of the key value “rell_hobbies”:
 ```
