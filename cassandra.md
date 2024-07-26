@@ -35,7 +35,8 @@ CREATE TABLE rell_countries (
   Currency varchar,
   Language varchar,
   Independence DATE,
-  NRate double);
+  NRate double
+);
 ```
 
 Queried the database to see the column family created: 
