@@ -13,13 +13,13 @@ Started the Cassandra CQL shell from the terminal:
 cqlsh
 ```
 
-Created a database (keyspace) whose name is “rell_db” and connected to it:
+Created a database (keyspace) whose name is "rell_db" and connected to it:
 ```
 CREATE KEYSPACE rell_db WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
 USE rell_db;
 ```
 
-Created a table (column family) “rell_countries” with the following columns:
+Created a table (column family) "rell_countries" with the following columns:
 1)	SNo of type int
 2)	Country of type String
 3)	Continent of type String
@@ -45,7 +45,7 @@ SELECT * FROM rell_countries;
 ```
 ![cassandra1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic1.png)
 
-Inserted the following 35 rows of data to the “rell_countries” column family:
+Inserted the following 35 rows of data to the "rell_countries" column family:
 ```
 INSERT INTO rell_countries (
   SNo, Country, Continent, Currency, Language, Independence, NRate
@@ -253,7 +253,7 @@ SELECT COUNT(*) FROM rell_countries ALLOW FILTERING;
 
 Q5: Returned the Countries that speaks English: 
 ```
-SELECT Country FROM rell_countries WHERE Language = “English” ALLOW FILTERING;
+SELECT Country FROM rell_countries WHERE Language = "English" ALLOW FILTERING;
 ```
 ![cassandra7](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic7.png) 
 
@@ -265,7 +265,7 @@ SELECT COUNT(*) FROM rell_countries WHERE Language = ‘French’ ALLOW FILTERIN
 
 Q7: Computed the average value of the NRate column for countries in Africa: 
 ```
-SELECT AVG(NRate) AS Average_NRate FROM rell_countries WHERE Continent = “Africa” ALLOW FILTERING;
+SELECT AVG(NRate) AS Average_NRate FROM rell_countries WHERE Continent = "Africa" ALLOW FILTERING;
 ```
 
 Q8, 9: Created index on the Continent and NRate columns which will be frequently used for filtering: 
@@ -277,6 +277,6 @@ CREATE INDEX ON rell_countries(NRate);
 
 Q10: Returned the countries in Africa continent whose NRate is less than the average NRate (31.23) of the countries in that same continent:
 ```
-SELECT Country FROM rell_countries WHERE Continent = “Africa” AND NRate < 31.23;
+SELECT Country FROM rell_countries WHERE Continent = "Africa" AND NRate < 31.23;
 ```
 ![cassandra10](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic10.png)
