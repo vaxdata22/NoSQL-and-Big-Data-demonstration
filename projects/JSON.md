@@ -6,6 +6,8 @@ To create a large JSON document with data and a corresponding JSON schema. The J
 
 ## Solution:
 
+Note: If the screenshots in this section are not showing, you can get the PDF [here.](https://drive.google.com/file/d/1u3Xyszm420XzZXfVnOf0Xe2Fuvow9INQ/view?usp=sharing)
+
 ### JSON DOCUMENT:
 
 The JSON Document contains different data types such as integer, float, date, strings, and lists.
