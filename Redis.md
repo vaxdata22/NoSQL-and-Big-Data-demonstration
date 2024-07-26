@@ -11,7 +11,9 @@
 Got the Redis server running from the terminal, and started the command line interface:
 ```
 redis-server
+
 redis-cli
+
 PING
 ```
 ![redis1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/redis/redis-pic1.png)
@@ -50,6 +52,7 @@ HSET rell_info:1 username rell password r477pr1$3 birthyear 1990 field bigdata
 Created a list data type whose key value is "rell_hobbies" and add elements to it:
 ```
 RPUSH rell_hobbies reading writing swimming trading investing
+
 EXISTS rell_hobbies
 ```
 
@@ -71,12 +74,14 @@ KEYS *
 Q2: Returned the value of the key "db_name"; and the values of the keys "name", "occupation", and "account_balance":
 ```
 GET db_name
+
 MGET name occupation account_balance
 ```
 
 Q3: Returned the field value of "username"; and the values of "password" and "birthyear" in a hash whose key is "rell_info:1":
 ```
 HGET rell_info:1 username
+
 HMGET rell_info:1 password birthyear
 ```
 ![redis4](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/redis/redis-pic4.png)
@@ -84,6 +89,7 @@ HMGET rell_info:1 password birthyear
 Q4: Returned all the fields and values in a hash whose key is "rell_info:1":
 ```
 HKEYS rell_info:1
+
 HVALS rell_info:1
 ```
 
@@ -101,6 +107,7 @@ TYPE rell_hobbies
 Q7: Deleted the key "special_number", and verify that it no longer exists:
 ```
 DEL special_number
+
 EXISTS special_number
 ```
 
