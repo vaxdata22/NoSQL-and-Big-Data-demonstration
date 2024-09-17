@@ -66,7 +66,7 @@ In this section, I explored working with the Neo4j database technology.
 
 Neo4j is a very popular graph database and an example of NoSQL technology.
 
-MongoDB uses its Cypher Query Language (CQL) for handling data management.
+Neo4j uses its Cypher Query Language (CQL) for handling data management.
 
 [Click here to go to the Neo4j section.](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/projects/Neo4j.md)
 
