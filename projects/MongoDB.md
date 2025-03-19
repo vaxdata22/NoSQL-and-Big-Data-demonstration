@@ -14,7 +14,7 @@ Started the MongoDB shell from the terminal:
 ```
 mongo
 ```
-![mongodb1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic1.png)
+![mongodb1](../screenshots/mongodb/mongodb-pic1.png)
 
 Created a database whose name is 'rell_db':
 ```
@@ -331,8 +331,8 @@ db.rell_info.insert({
   Next_of_kin: 'Isodje Dorcas'
 })
 ```
-![mongodb2](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic2.png)
-![mongodb3](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic3.png)
+![mongodb2](../screenshots/mongodb/mongodb-pic2.png)
+![mongodb3](../screenshots/mongodb/mongodb-pic3.png)
 
 ## Queries:
 
@@ -345,19 +345,19 @@ Q2: Queried the database for the first document:
 ```
 db.rell_info.find({_id:1}).pretty()
 ```
-![mongodb4](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic4.png)
+![mongodb4](../screenshots/mongodb/mongodb-pic4.png)
 
 Q3: Queried the database and return only one document; this essentially returned the first document: 
 ```
 db.rell_info.findOne()
 ```
-![mongodb5](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic5.png)
+![mongodb5](../screenshots/mongodb/mongodb-pic5.png)
 
 Q4: Queried the database for the document having 'Info: Financial': 
 ```
 db.rell_info.find({Info:'Financial'}).pretty()
 ```
-![mongodb6](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic6.png)
+![mongodb6](../screenshots/mongodb/mongodb-pic6.png)
 
 Q5: Queried the database to know if the document having 'Info: Productivity' is classified or not: 
 ```
@@ -368,49 +368,49 @@ Q6: Queried the database to show only the 'Info' entries of the list of document
 ```
 db.rell_info.find({Classified:'Yes'}, {Info:1, _id:0})
 ```
-![mongodb7](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic7.png)
+![mongodb7](../screenshots/mongodb/mongodb-pic7.png)
 
 Q7: Queried the database to see the first 10 documents sorted in descending order of their 'Info_rank' values, and excluding the entries for '_id', 'Info_rank', 'Info_priority', 'Classified': 
 ```
 db.rell_info.find({}, {Info_rank:0, Info_priority:0, Classified:0, _id:0}).sort({Info_rank:-1}).limit(10).pretty()
 ```
-![mongodb8](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic8.png)
+![mongodb8](../screenshots/mongodb/mongodb-pic8.png)
 
 Q8: Queried the database for the documents having 'Info_rank: 5': 
 ```
 db.rell_info.find({Info_rank:5}).pretty()
 ```
-![mongodb9](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic9.png)
+![mongodb9](../screenshots/mongodb/mongodb-pic9.png)
 
 Q9: Queried the database for the first 5 documents: 
 ```
 db.rell_info.find({_id:{$lte:5}}).pretty()
 ```
-![mongodb10](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic10.png)
+![mongodb10](../screenshots/mongodb/mongodb-pic10.png)
 
 Q10: Queried the database for the first 5 documents (ideal method): 
 ```
 db.rell_info.find().limit(5).pretty()
 ```
-![mongodb11](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic11.png)
+![mongodb11](../screenshots/mongodb/mongodb-pic11.png)
 
 Q11: Queried the database for only the 'Info' entries of the first 10 documents, sorted in asccending order of their 'Info_rank' values, and without showing their '_id' values: 
 ```
 db.rell_info.find({}, {Info:1, _id:0}).sort({Info_rank:1}).limit(10).pretty()
 ```
-![mongodb12](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic12.png)
+![mongodb12](../screenshots/mongodb/mongodb-pic12.png)
 
 Q12: Queried the database for any document having '_id' values of 1 or 25; this essentially returns the first and last documents in the database: 
 ```
 db.rell_info.find({$or: [{_id:1}, {_id:25}] }).pretty()
 ```
-![mongodb13](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic13.png)
+![mongodb13](../screenshots/mongodb/mongodb-pic13.png)
 
 Q13: Queried the database for the documents having 'Info_priority: High' and 'Classified: Yes':
 ```
 db.rell_info.find({$and: [{Info_priority:'High'}, {Classified:'Yes'}] }).pretty()
 ```
-![mongodb14](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic14.png)
+![mongodb14](../screenshots/mongodb/mongodb-pic14.png)
 
 Q14: Queried the database for the number of documents per 'Info_priority' count:
 ```
@@ -421,4 +421,4 @@ Q15: Queried the database for the average 'Info_rank' values of documents per 'C
 ```
 db.rell_info.aggregate([{$group: {_id:'$Classified', average_info_rank: {$avg: '$Info_rank'}} }])
 ```
-![mongodb15](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/mongodb/mongodb-pic15.png)
+![mongodb15](../screenshots/mongodb/mongodb-pic15.png)
