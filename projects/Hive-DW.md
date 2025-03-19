@@ -23,7 +23,7 @@ mkdir assignment
 
 cd assignment
 ```
-![hive-dw1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic1.png)
+![hive-dw1](../screenshots/hive/hive-pic1.png)
 
 Four (4) CSV files, “artistes.csv”, “songs.csv”, “albums.csv”, and “labels.csv” have been created for the purpose of this task to contain 50, 54, 53, and 37 rows of data respectively. 
 These files were placed in the Hadoop environment (the commands were run from the terminal):
@@ -36,7 +36,7 @@ hdfs dfs -put albums.csv
 
 hdfs dfs -put labels.csv
 ```
-![hive-dw2](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic2.png)
+![hive-dw2](../screenshots/hive/hive-pic2.png)
 
 Made sure there were no pre-existing database(s) in the current working directory in Hadoop:
 ```
@@ -47,7 +47,7 @@ Started the Hive command line interface:
 ```
 hive
 ```
-![hive-dw3](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic3.png)
+![hive-dw3](../screenshots/hive/hive-pic3.png)
 
 Created a database “assignment_db” in Hive for this task:
 ```
@@ -55,7 +55,7 @@ CREATE DATABASE assignment_db;
 
 SHOW DATABASES;
 ```
-![hive-dw4](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic4.png)
+![hive-dw4](../screenshots/hive/hive-pic4.png)
 
 Switched to the newly created Hive database:
 ```
@@ -80,13 +80,13 @@ CREATE TABLE labels (
   origin STRING, label STRING, owner STRING, records INT
   ) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
 ```
-![hive-dw5](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic5.png)
+![hive-dw5](../screenshots/hive/hive-pic5.png)
 
 Queried the list of tables created in the Hive data warehouse:
 ```
 SHOW TABLES;
 ```
-![hive-dw6](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic6.png)
+![hive-dw6](../screenshots/hive/hive-pic6.png)
 
 Inserted all rows of data from each of the four (4) CSV files into their corresponding tables in the Hive data warehouse:
 ```
@@ -98,7 +98,7 @@ LOAD DATA INPATH 'albums.csv' OVERWRITE INTO TABLE albums;
 
 LOAD DATA INPATH 'labels.csv' OVERWRITE INTO TABLE labels;
 ```
-![hive-dw7](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic7.png)
+![hive-dw7](../screenshots/hive/hive-pic7.png)
 
 ## Queries
 
@@ -110,7 +110,7 @@ SELECT
 FROM
   albums;
 ```
-![hive-dw8](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic8.png)
+![hive-dw8](../screenshots/hive/hive-pic8.png)
 
 Q2 - Returned the maximum, minimum, and average Age of musical Artistes:
 ```
@@ -121,7 +121,7 @@ SELECT
 FROM
   artistes;
 ```
-![hive-dw9](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic9.png)
+![hive-dw9](../screenshots/hive/hive-pic9.png)
 
 Q3 - Returned the number of record Labels per label Owner:
 ```
@@ -135,8 +135,8 @@ GROUP BY
 ORDER BY
   Labels DESC;
 ```
-![hive-dw10](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic10.png)
-![hive-dw11](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic11.png)
+![hive-dw10](../screenshots/hive/hive-pic10.png)
+![hive-dw11](../screenshots/hive/hive-pic11.png)
 
 Q4 – Returned the “Independent” record labels and their countries of origin:
 ```
@@ -148,7 +148,7 @@ FROM
 WHERE
   owner = “Independent”;
 ```
-![hive-dw12](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic12.png)
+![hive-dw12](../screenshots/hive/hive-pic12.png)
 
 Q5 - Returned the maximum, minimum, and average of the Rating and Tracks of music Albums:
 ```
@@ -162,7 +162,7 @@ SELECT
 FROM
   albums;
 ```
-![hive-dw13](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic13.png)
+![hive-dw13](../screenshots/hive/hive-pic13.png)
 
 Q6 - Returned the maximum, minimum, and average album Records produced by record Labels:
 ```
@@ -173,7 +173,7 @@ SELECT
 FROM
   labels;
 ```
-![hive-dw14](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic14.png)
+![hive-dw14](../screenshots/hive/hive-pic14.png)
 
 Q7 - Returned the number of Songs per Year (sorted in descending order of the Year):
 ```
@@ -191,7 +191,7 @@ GROUP BY
 ORDER BY
   Year DESC;
 ```
-![hive-dw15](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic15.png)
+![hive-dw15](../screenshots/hive/hive-pic15.png)
 
 Q8 - Returned the number of Songs, music Albums, and Genre(s) per musical Artiste as well as (top 10 highest by Songs):
 ```
@@ -212,8 +212,8 @@ ORDER BY
   Songs DESC
 LIMIT 10;
 ```
-![hive-dw16](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic16.png)
-![hive-dw17](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic17.png)
+![hive-dw16](../screenshots/hive/hive-pic16.png)
+![hive-dw17](../screenshots/hive/hive-pic17.png)
 
 Q9 - Returned the number of Songs, music Albums, musical Artistes, average Age, and average Rating per Gender:
 ```
@@ -239,7 +239,7 @@ GROUP BY
 ORDER BY
   Songs DESC;
 ```
-![hive-dw18](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic18.png)
+![hive-dw18](../screenshots/hive/hive-pic18.png)
 
 Q10 - Returned the number of Songs, music Albums, Genre(s), average Age, average Rating, and musical Artistes (male/female) per Marital status:
 ```
@@ -283,7 +283,7 @@ FROM
   ORDER BY
     Artistes;
 ```
-![hive-dw19](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic19.png)
+![hive-dw19](../screenshots/hive/hive-pic19.png)
 
 Q11 - Returned the number of Songs, music Albums, Genre(s), record Labels, number of Records sold, total Rating, average Rating, average Age, and number of musical Artistes (male and female) per Country of Origin (top 10):
 ```
@@ -335,7 +335,7 @@ FROM
     Artistes DESC
   LIMIT 10;
 ```
-![hive-dw20](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic20.png)
+![hive-dw20](../screenshots/hive/hive-pic20.png)
 
 Q12 - Returned the number of Songs, music Albums, record Labels, number of Records sold, total Rating, average Rating, average Age, Countries of Origin, and number of musical Artistes (male and female) per music Genre:
 ```
@@ -388,7 +388,7 @@ FROM
     Artistes DESC
   LIMIT 10;
 ```
-![hive-dw21](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic21.png)
+![hive-dw21](../screenshots/hive/hive-pic21.png)
 
 Q13 - Returned the number of Songs, music Albums, total Rating, average Rating, average Age, and musical Artistes (males/females) per record Label:
 ```
@@ -436,4 +436,4 @@ FROM
     Artistes DESC
   LIMIT 10;
 ```
-![hive-dw22](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/hive/hive-pic22.png)
+![hive-dw22](../screenshots/hive/hive-pic22.png)
