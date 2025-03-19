@@ -25,7 +25,7 @@ cd assignment
 ```
 ![hive-dw1](../screenshots/hive/hive-pic1.png)
 
-Four (4) CSV files, “artistes.csv”, “songs.csv”, “albums.csv”, and “labels.csv” have been created for the purpose of this task to contain 50, 54, 53, and 37 rows of data respectively. 
+Four (4) CSV files, “artistes.csv”, “songs.csv”, “albums.csv”, and “labels.csv” have been created for the purpose of this task to contain 50, 54, 53, and 37 rows of data respectively. See the datasets [here](../hive-dw-datasets).
 These files were placed in the Hadoop environment (the commands were run from the terminal):
 ```
 hdfs dfs -put artistes.csv
