@@ -46,7 +46,7 @@ Queried the database to see the column family created:
 ```
 SELECT * FROM rell_countries;
 ```
-![cassandra1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic1.png)
+![cassandra1](../screenshots/cassandra/cassandra-pic1.png)
 
 Inserted the following 35 rows of data to the "rell_countries" column family:
 ```
@@ -260,7 +260,7 @@ INSERT INTO rell_countries (
     35, 'Bahrain', 'Asia', 'Bahraini Dinar', 'Arabic', '1971-08-15', 3317.95
     );
 ```
-![cassandra2](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic2.png)
+![cassandra2](../screenshots/cassandra/cassandra-pic2.png)
 
 ## Queries:
 
@@ -268,37 +268,37 @@ Q1: Queried the database for all records:
 ```
 SELECT * FROM rell_countries;
 ```
-![cassandra3](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic3.png)
+![cassandra3](../screenshots/cassandra/cassandra-pic3.png)
 
 Q2: Returned the first 10 data: 
 ```
 SELECT * FROM rell_countries LIMIT 10;
 ```
-![cassandra4](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic4.png)
+![cassandra4](../screenshots/cassandra/cassandra-pic4.png)
 
 Q3: Returned the list of Continents: 
 ```
 SELECT Continent FROM rell_countries;
 ```
-![cassandra5](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic5.png)
+![cassandra5](../screenshots/cassandra/cassandra-pic5.png)
 
 Q4: Checked how many rows of data that are there in the table: 
 ```
 SELECT COUNT(*) FROM rell_countries ALLOW FILTERING;
 ```
-![cassandra6](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic6.png)
+![cassandra6](../screenshots/cassandra/cassandra-pic6.png)
 
 Q5: Returned the Countries that speaks English: 
 ```
 SELECT Country FROM rell_countries WHERE Language = "English" ALLOW FILTERING;
 ```
-![cassandra7](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic7.png) 
+![cassandra7](../screenshots/cassandra/cassandra-pic7.png) 
 
 Q6: Returned the number of countries that speak French:
 ```
 SELECT COUNT(*) FROM rell_countries WHERE Language = 'French' ALLOW FILTERING;
 ```
-![cassandra8](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic8.png)
+![cassandra8](../screenshots/cassandra/cassandra-pic8.png)
 
 Q7: Computed the average value of the NRate column for countries in Africa: 
 ```
@@ -311,10 +311,10 @@ CREATE INDEX ON rell_countries(Continent);
 
 CREATE INDEX ON rell_countries(NRate);
 ```
-![cassandra9](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic9.png)
+![cassandra9](../screenshots/cassandra/cassandra-pic9.png)
 
 Q10: Returned the countries in Africa continent whose NRate is less than the average NRate (31.23) of the countries in that same continent:
 ```
 SELECT Country FROM rell_countries WHERE Continent = "Africa" AND NRate < 31.23;
 ```
-![cassandra10](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/cassandra/cassandra-pic10.png)
+![cassandra10](../screenshots/cassandra/cassandra-pic10.png)
