@@ -584,6 +584,6 @@ The JSON Document contains different data types such as integer, float, date, st
 
 Screenshots showing successful validation of the JSON Document against the JSON Schema using: https://www.liquid-technologies.com/online-json-schema-validator/ 
 
-![json1](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/json/json-pic1.png)
+![json1](../screenshots/json/json-pic1.png)
 
-![json2](https://github.com/vaxdata22/NoSQL-and-Big-Data-demonstration/blob/main/screenshots/json/json-pic2.png)
+![json2](../screenshots/json/json-pic2.png)
